@@ -63,7 +63,7 @@ module.exports = router => {
 	});
 
 
-	router.post('/statuss', (req, res) => {
+	router.post('/status', (req, res) => {
 
 		const email = req.body.email;
 		const address = req.body.address;

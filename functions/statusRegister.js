@@ -3,7 +3,7 @@
 const status = require('../models/status');
 
 
-exports.registerStatus = (email, day, timestart, timeend) =>
+exports.registerStatus = (email, address, day, timestart, timeend) =>
 
 	new Promise((resolve,reject) => {
 
@@ -11,6 +11,7 @@ exports.registerStatus = (email, day, timestart, timeend) =>
 			const newStatus = new status({
 
 			email : email,
+			address : address,
 			day : day,
 			timestart: timestart,
 			timeend : timeend,
@@ -30,6 +31,6 @@ exports.registerStatus = (email, day, timestart, timeend) =>
 			} else {
 
 				reject({ status: 500, message: 'Internal Server Error !' });
-			}
+		}	
 		});
 });

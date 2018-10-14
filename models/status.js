@@ -6,11 +6,12 @@ const Schema = mongoose.Schema;
 
 const statusSchema = mongoose.Schema({
 
-  email     : String,
-	day 			: String,
-	timestart			: String,
-	timeend	: String,
-	created_at		: String
+  	email     	: String,
+  	address 	: String,
+	day 		: String,
+	timestart	: String,
+	timeend		: String,
+	created_at	: String
 
 });
 
