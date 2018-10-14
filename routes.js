@@ -4,6 +4,7 @@ const auth = require('basic-auth');
 const jwt = require('jsonwebtoken');
 
 const register = require('./functions/register');
+const statusRegister  = require('./functions/statusRegister');
 const login = require('./functions/login');
 const profile = require('./functions/profile');
 const password = require('./functions/password');
@@ -59,6 +60,27 @@ module.exports = router => {
 
 			.catch(err => res.status(err.status).json({ message: err.message }));
 		}
+	});
+
+
+	router.post('/statuss', (req, res) => {
+
+		const email = req.body.email;
+		const address = req.body.address;
+		const day = req.body.day;
+		const timestart = req.body.timestart;
+		const timeend = req.body.timeend;
+
+
+
+			statusRegister.registerStatus(email, address, day, timestart, timeend)
+
+			.then(result => {
+
+			})
+
+			.catch(err => {});
+
 	});
 
 	router.get('/users/:id', (req,res) => {
