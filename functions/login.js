@@ -25,10 +25,11 @@ exports.loginUser = (email, password) =>
 		.then(user => {
 
 			const hashed_password = user.hashed_password;
+			const business_code = user.business_code;
 
 			if (bcrypt.compareSync(password, hashed_password)) {
 
-				resolve({ status: 200, message: email });
+				resolve({ status: 200, message: email ,business_code: business_code});
 
 			} else {
 

@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const statusSchema = mongoose.Schema({
+const statusSchema = new Schema({
 
   	email     	: String,
   	address 	: String,
@@ -16,6 +16,6 @@ const statusSchema = mongoose.Schema({
 });
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost:27017/node-login', {useMongoClient:true});
+mongoose.connect('mongodb://localhost:27017/node-login');
 
 module.exports = mongoose.model('status', statusSchema);

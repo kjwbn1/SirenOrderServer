@@ -3,12 +3,12 @@
 const status = require('../models/status');
 
 
+
 exports.registerStatus = (email, address, day, timestart, timeend) =>
 
 	new Promise((resolve,reject) => {
-
-
-			const newStatus = new status({
+		
+		const newStatus = new status({
 
 			email : email,
 			address : address,

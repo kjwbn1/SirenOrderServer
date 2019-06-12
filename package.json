@@ -1,16 +1,35 @@
 {
-  "name": "node-login",
+  "name": "login",
   "version": "1.0.0",
   "main": "app.js",
   "dependencies": {
     "basic-auth": "^1.0.4",
     "bcryptjs": "^2.3.0",
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
     "jsonwebtoken": "^7.1.9",
-    "mongoose": "^4.6.0",
+    "mongodb": "^3.2.7",
+    "mongoose": "^5.5.13",
+    "mongoose-schema-jsonschema": "^1.2.1",
     "morgan": "^1.7.0",
-    "nodemailer": "^2.7.2",
-    "randomstring": "^1.1.5"
-  }
+    "multer": "^1.4.1",
+    "nodemailer": "^2.6.0",
+    "randomstring": "^1.1.5",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjwbn1/serverYoTTaGa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kjwbn1/serverYoTTaGa/issues"
+  },
+  "homepage": "https://github.com/kjwbn1/serverYoTTaGa#readme",
+  "description": ""
 }
